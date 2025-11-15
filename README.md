@@ -28,16 +28,29 @@ You can create boards, lists, cards, edit them, delete them, and everything upda
 ## 📂 Project Structure
 
 ```
-trello-dashboard/
-│
-├── app/
-│   ├── page.tsx              # Main frontend
-│   └── api/trelloApi.ts      # API utilities for backend
+inscripts/
 │
 ├── backend/
-│   └── server.js             # Express + Websocket + Trello API
+│   ├── server.js
+│   ├── package.json
+│   └── package-lock.json
+│
+├── frontend/
+│   ├── app/
+│   ├── public/
+│   ├── next.config.ts
+│   ├── next-env.d.ts
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── tsconfig.json
+│   ├── postcss.config.mjs
+│   └── eslint.config.mjs
+│
+├── postman/
+│   └── inscripts.postman_collection.json
 │
 └── README.md
+
 ```
 
 ---
