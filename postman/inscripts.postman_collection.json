@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "337523cf-021f-47d6-bdf3-cfe3a6335416",
+		"name": "inscripts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39178508",
+		"_collection_link": "https://www.postman.com/altimetry-architect-81995266/workspace/public-workspace/collection/39178508-337523cf-021f-47d6-bdf3-cfe3a6335416?action=share&source=collection_link&creator=39178508"
+	},
+	"item": [
+		{
+			"name": "Test Trello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/test-trello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"test-trello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"listId\": \"691093b99bb68534274810af\",\n  \"name\": \"Write Backend API\",\n  \"desc\": \"Implement the /api/tasks route to create cards in Trello\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Test Board from API\",\n  \"defaultLists\": true\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/board",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"board"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Updated Task Title\",\n  \"desc\": \"This card has been updated successfully\",\n  \"idList\": \"691093b99bb68534274810af\" // optional, only if you want to move it\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/task/6914302f98c02532d5c6116f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"task",
+						"6914302f98c02532d5c6116f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task(close)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/task/6914302f98c02532d5c6116f/close",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"task",
+						"6914302f98c02532d5c6116f",
+						"close"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/task/6914302f98c02532d5c6116f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"task",
+						"6914302f98c02532d5c6116f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
